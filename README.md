@@ -15,10 +15,10 @@ Built from the reference file you provided (`PCB Consulting and Solar Profession
 - **Logo colors**: blue `#1a56db` + orange `#f5821f`, matching your PCB icon
 - **Phone**: +27 82 855 4356 (used for `tel:` links and WhatsApp `wa.me` links)
 - **Email**: info@pcbconsulting.co.za
-- **Service area**: "Serving all areas, South Africa" (no fixed office address, so no map is embedded)
+- **Service area**: Covering Gauteng, South Africa (no fixed office address, so no map is embedded)
 - **Business hours**: Mon–Fri 7:00–18:00, Sat 8:00–16:00, 24/7 for emergencies
 - **Services**: Solar Installation, Residential Electrical, Commercial Electrical, 24/7 Electrician — copy and bullet points taken directly from your PDF
-- **Pricing**: the home component packages (4-panel, 6-panel, battery, etc.) and the three-tier packages (Basic R45,000 / Professional R85,000 / Commercial from R150,000) are your real published prices, including the equipment brands (Canadian Solar, Deye, Shoto)
+- **Pricing**: the home component packages (4-panel, 6-panel, battery, etc.) and the three-tier packages (Basic R45,000 / Professional R85,000 / Commercial from R150,000) are your real published prices, including the equipment brands (Canadian Solar, Deye, Hubble)
 
 No stock photos are used — since there were no real project photos to draw from, all visuals are simple SVG illustrations in your brand colors instead of generic/fake stock imagery.
 
