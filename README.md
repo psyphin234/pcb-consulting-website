@@ -27,8 +27,14 @@ No stock photos are used — since there were no real project photos to draw fro
 - **Company history / credentials** — the About page has a highlighted note (search `placeholder-note` in `about.html`) asking for your founding story, qualifications (e.g. Wireman's Licence, PV GreenCard), and team info. Nothing was invented here on purpose.
 - **Pricing currency** — prices will drift over time (equipment costs, exchange rates); the pricing section already includes a disclaimer, but update the numbers periodically.
 - **Contact form** — it currently opens a pre-filled email via `mailto:` (no backend needed, works immediately). For a proper inbox/lead tracking experience, connect it to a form service like **Formspree** or **Netlify Forms** — that just means changing the `<form>`'s handling in `contact.html` / `js/main.js`.
-- **Logo file** — the header/footer use a hand-built SVG approximation of your PCB icon (sun + panel motif in your colors). If you have the original logo file (PNG/SVG), swap it in for pixel-perfect accuracy.
 - **Social links** — none are included since none were provided. Add them to the footer if you have active business social accounts.
+
+## Logo
+`assets/logo-full.png` and `assets/logo-mark.png` are your real logo, cut from `PCB_Consulting_Logo1.jpeg` with the background removed:
+- `logo-mark.png` — the icon only (sun, panel, swoosh, bolt). Used in the header, footer, and as the favicon.
+- `logo-full.png` — the full lockup (icon + "PCB CONSULTING" wordmark). Used as a showcase graphic on the About page.
+
+If you get a vector (SVG/AI/EPS) version of the logo later, swap these PNGs out for a cleaner-edged version — the current ones are a JPEG-to-transparent-PNG cutout, which is clean but not vector-crisp at very large sizes.
 
 ## Running locally
 No build step — just open `index.html` in a browser, or serve the folder with any static server, e.g.:
