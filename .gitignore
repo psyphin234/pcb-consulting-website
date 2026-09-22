@@ -3,3 +3,7 @@ Caddyfile
 
 # Internal reference material, not part of the published site
 PCB Consulting and Solar Professional Website Home.pdf
+
+# Raw source photos (uncropped, with phone watermarks) — the cleaned
+# and optimized versions used on the site live in assets/installs/
+install pics/
