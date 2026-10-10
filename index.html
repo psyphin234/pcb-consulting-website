@@ -65,28 +65,106 @@
       </div>
     </div>
     <div class="hero-art">
-      <svg viewBox="0 0 480 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a house with rooftop solar panels and the sun">
-        <ellipse cx="240" cy="380" rx="190" ry="18" fill="#0a1626"/>
-        <circle cx="380" cy="70" r="46" fill="#f5821f" opacity="0.9"/>
-        <g stroke="#f5821f" stroke-width="4" stroke-linecap="round" opacity="0.7">
-          <line x1="380" y1="4" x2="380" y2="20"/>
-          <line x1="314" y1="70" x2="330" y2="70"/>
-          <line x1="332" y1="22" x2="343" y2="33"/>
-          <line x1="428" y1="22" x2="417" y2="33"/>
+      <svg class="solar-scene" viewBox="0 0 480 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated illustration of the sun shining on solar panels on a house roof">
+        <defs>
+          <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffb46a" stop-opacity="0.55"/>
+            <stop offset="1" stop-color="#f5821f" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="beam-cone" x1="398" y1="74" x2="240" y2="220" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffb46a" stop-opacity="0.35"/>
+            <stop offset="1" stop-color="#ffb46a" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="cell-fill" x1="0" y1="182" x2="0" y2="242" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4c7cf0"/>
+            <stop offset="1" stop-color="#1a56db"/>
+          </linearGradient>
+          <linearGradient id="glare" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="0.5" stop-color="#fff" stop-opacity="0.55"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="panel-clip"><polygon points="120,242 360,242 309,182 171,182"/></clipPath>
+        </defs>
+
+        <ellipse cx="240" cy="374" rx="200" ry="16" fill="#0a1626"/>
+
+        <!-- Sun -->
+        <circle class="sun-glow" cx="398" cy="74" r="72" fill="url(#sun-glow)"/>
+        <g class="sun-rays" stroke="#f5821f" stroke-width="4" stroke-linecap="round" opacity="0.8">
+          <line x1="446.0" y1="74.0" x2="458.0" y2="74.0"/>
+          <line x1="439.6" y1="98.0" x2="450.0" y2="104.0"/>
+          <line x1="422.0" y1="115.6" x2="428.0" y2="126.0"/>
+          <line x1="398.0" y1="122.0" x2="398.0" y2="134.0"/>
+          <line x1="374.0" y1="115.6" x2="368.0" y2="126.0"/>
+          <line x1="356.4" y1="98.0" x2="346.0" y2="104.0"/>
+          <line x1="350.0" y1="74.0" x2="338.0" y2="74.0"/>
+          <line x1="356.4" y1="50.0" x2="346.0" y2="44.0"/>
+          <line x1="374.0" y1="32.4" x2="368.0" y2="22.0"/>
+          <line x1="398.0" y1="26.0" x2="398.0" y2="14.0"/>
+          <line x1="422.0" y1="32.4" x2="428.0" y2="22.0"/>
+          <line x1="439.6" y1="50.0" x2="450.0" y2="44.0"/>
         </g>
-        <path d="M90 250 L240 140 L390 250 V360 H90 Z" fill="#15294a"/>
-        <path d="M90 250 L240 140 L390 250 L240 270 Z" fill="#1e3a63"/>
-        <rect x="120" y="270" width="240" height="90" fill="#0c1a33"/>
-        <g transform="translate(150,175)">
-          <rect x="0" y="0" width="180" height="70" rx="4" fill="#1a56db" stroke="#0c1a33" stroke-width="2" transform="skewY(-18)"/>
+        <circle cx="398" cy="74" r="36" fill="#f5821f"/>
+        <circle cx="388" cy="64" r="18" fill="#ffb46a" opacity="0.45"/>
+
+
+        <!-- House -->
+        <rect x="95" y="248" width="290" height="116" fill="#15294a"/>
+        <rect x="300" y="140" width="22" height="34" fill="#15294a"/>
+        <polygon points="70,250 140,168 340,168 410,250" fill="#1e3a63"/>
+        <polygon points="70,250 410,250 404,258 76,258" fill="#0c1a33"/>
+
+        <!-- Solar panels -->
+        <polygon points="112.0,245.6 368.0,245.6 308.6,178.4 171.4,178.4" fill="#0c1a33"/>
+        <g fill="url(#cell-fill)">
+          <polygon points="123.7,239.9 179.0,239.9 190.3,214.1 145.3,214.1"/>
+          <polygon points="182.8,239.9 238.1,239.9 238.5,214.1 193.4,214.1"/>
+          <polygon points="241.9,239.9 297.2,239.9 286.6,214.1 241.5,214.1"/>
+          <polygon points="301.0,239.9 356.3,239.9 334.7,214.1 289.7,214.1"/>
+          <polygon points="148.8,209.9 192.2,209.9 203.5,184.1 170.3,184.1"/>
+          <polygon points="195.1,209.9 238.5,209.9 238.9,184.1 205.7,184.1"/>
+          <polygon points="241.5,209.9 284.9,209.9 274.3,184.1 241.1,184.1"/>
+          <polygon points="287.8,209.9 331.2,209.9 309.7,184.1 276.5,184.1"/>
         </g>
+        <g clip-path="url(#panel-clip)">
+          <rect class="panel-glare" x="60" y="170" width="60" height="90" fill="url(#glare)" transform="skewX(-20)"/>
+        </g>
+
+        <!-- Light falling on the panels -->
+        <polygon class="beam-cone" points="398,74 173.3,188.0 298.7,239.0" fill="url(#beam-cone)"/>
+        <g stroke="#ffb46a" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 16">
+          <line class="beam beam-1" x1="356.7" y1="125.5" x2="300" y2="196"/>
+          <line class="beam beam-2" x1="352.0" y1="121.3" x2="262" y2="214"/>
+          <line class="beam beam-3" x1="348.6" y1="117.8" x2="222" y2="230"/>
+          <line class="beam beam-4" x1="370.1" y1="133.8" x2="330" y2="220"/>
+        </g>
+
+        <!-- Wiring from panels to inverter -->
+        <path d="M354 244 L362 262 L362 276" stroke="#0c1a33" stroke-width="4" stroke-linecap="round"/>
+        <circle class="spark spark-1" r="3" fill="#ffb46a"/>
+        <circle class="spark spark-2" r="3" fill="#ffb46a"/>
+        <rect x="348" y="276" width="28" height="36" rx="3" fill="#0c1a33"/>
+        <rect class="inverter-led" x="355" y="284" width="14" height="4" rx="2" fill="#f5821f"/>
+        <rect x="355" y="292" width="14" height="2" rx="1" fill="#274873"/>
+        <rect x="355" y="298" width="14" height="2" rx="1" fill="#274873"/>
+
+        <!-- Windows and door -->
         <g fill="#274873">
-          <rect x="150" y="290" width="46" height="70" rx="2"/>
-          <rect x="284" y="290" width="46" height="70" rx="2"/>
+          <rect x="128" y="284" width="50" height="46" rx="3"/>
+          <rect x="278" y="284" width="50" height="46" rx="3"/>
         </g>
-        <rect x="222" y="300" width="36" height="60" rx="2" fill="#0a1626"/>
-        <rect x="235" y="315" width="10" height="14" rx="2" fill="#f5821f"/>
-      </svg>
+        <g class="window-glow" fill="#ffb46a">
+          <rect x="128" y="284" width="50" height="46" rx="3"/>
+          <rect x="278" y="284" width="50" height="46" rx="3"/>
+        </g>
+        <g stroke="#15294a" stroke-width="3">
+          <line x1="153" y1="284" x2="153" y2="330"/><line x1="128" y1="307" x2="178" y2="307"/>
+          <line x1="303" y1="284" x2="303" y2="330"/><line x1="278" y1="307" x2="328" y2="307"/>
+        </g>
+        <rect x="214" y="290" width="44" height="74" rx="3" fill="#0a1626"/>
+        <circle cx="248" cy="330" r="4" fill="#f5821f"/>
+        </svg>
     </div>
   </div>
 </section>

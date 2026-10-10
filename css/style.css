@@ -308,6 +308,34 @@ section { padding: 88px 0; }
 
 .hero-art svg { width: 100%; height: auto; }
 
+/* ---- Animated solar scene in the home hero ---- */
+.solar-scene .sun-rays { transform-origin: 398px 74px; animation: sun-spin 24s linear infinite; }
+.solar-scene .sun-glow { transform-origin: 398px 74px; animation: sun-pulse 4s ease-in-out infinite; }
+.solar-scene .beam { animation: beam-flow 1.6s linear infinite; }
+.solar-scene .beam-2 { animation-delay: -0.4s; }
+.solar-scene .beam-3 { animation-delay: -0.8s; }
+.solar-scene .beam-4 { animation-delay: -1.2s; }
+.solar-scene .beam-cone { animation: cone-pulse 4s ease-in-out infinite; }
+.solar-scene .panel-glare { animation: panel-glare 4s ease-in-out infinite; }
+.solar-scene .spark { offset-path: path("M354 244 L362 262 L362 276"); animation: spark-flow 1.4s linear infinite; }
+.solar-scene .spark-2 { animation-delay: -0.7s; }
+.solar-scene .inverter-led { animation: led-blink 1.4s ease-in-out infinite; }
+.solar-scene .window-glow { opacity: 0.25; animation: window-glow 4s ease-in-out infinite; }
+
+@keyframes sun-spin { to { transform: rotate(360deg); } }
+@keyframes sun-pulse { 0%, 100% { transform: scale(0.9); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
+@keyframes beam-flow { to { stroke-dashoffset: -26; } }
+@keyframes cone-pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+@keyframes panel-glare { 0% { transform: skewX(-20deg) translateX(0); } 60%, 100% { transform: skewX(-20deg) translateX(380px); } }
+@keyframes spark-flow { 0% { offset-distance: 0%; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+@keyframes led-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@keyframes window-glow { 0%, 100% { opacity: 0.18; } 50% { opacity: 0.45; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .solar-scene * { animation: none !important; }
+  .solar-scene .spark { display: none; }
+}
+
 /* ---- Trust bar ---- */
 .trust-bar {
   background: var(--color-surface);
