@@ -53,4 +53,10 @@ npx serve .
 ```
 
 ## Deploying
-Any static host works: Netlify, Vercel, GitHub Pages, or your existing hosting via FTP — just upload the whole folder.
+Hosted on **GitHub Pages** from the `master` branch of `psyphin234/pcb-consulting-website`, at **https://pcbconsulting.co.za**. Pushing to `master` publishes the site. The `CNAME` file holds the custom domain, so don't delete it.
+
+DNS lives at Afrihost (ClientZone). The website records are:
+- `@` A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `www` CNAME → `psyphin234.github.io.`
+
+Netlify is no longer used.
