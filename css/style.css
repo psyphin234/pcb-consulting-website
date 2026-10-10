@@ -276,7 +276,8 @@ section { padding: 88px 0; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-art { order: -1; max-width: 360px; margin: 0 auto; }
 }
-.hero-head { grid-column: 1 / -1; margin-bottom: -20px; }
+.hero-head { grid-column: 1 / -1; margin-bottom: -10px; }
+.hero-copy { align-self: start; }
 .hero h1 {
   color: #fff;
   font-size: clamp(2rem, 3.6vw, 3rem);
