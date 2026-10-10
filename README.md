@@ -15,7 +15,7 @@ Built from the reference file you provided (`PCB Consulting and Solar Profession
 - **Logo colors**: blue `#1a56db` + orange `#f5821f`, matching your PCB icon
 - **Phone**: +27 82 855 4356 (used for `tel:` links and WhatsApp `wa.me` links)
 - **Email**: info@pcbconsulting.co.za
-- **Service area**: Covering Gauteng, South Africa (no fixed office address, so no map is embedded)
+- **Service area**: Sandton, Centurion, Midrand, Waterkloof, Irene and Amberfield (no fixed office address, so no map is embedded)
 - **Business hours**: Mon–Fri 7:00–18:00, Sat 8:00–16:00, 24/7 for emergencies
 - **Services**: Solar Installation, Residential Electrical, Commercial Electrical, 24/7 Electrician — copy and bullet points taken directly from your PDF
 - **Pricing**: the home component packages (4-panel, 6-panel, battery, etc.) and the three-tier packages (Basic R45,000 / Professional R85,000 / Commercial from R150,000) are your real published prices, including the equipment brands (Canadian Solar, Deye, Hubble)
@@ -29,8 +29,15 @@ No stock photos are used. The hero and 24/7-emergency illustrations on `index.ht
 - **Contact form** — it currently opens a pre-filled email via `mailto:` (no backend needed, works immediately). For a proper inbox/lead tracking experience, connect it to a form service like **Formspree** or **Netlify Forms** — that just means changing the `<form>`'s handling in `contact.html` / `js/main.js`.
 - **Social links** — none are included since none were provided. Add them to the footer if you have active business social accounts.
 
+## SEO
+- `sitemap.xml` and `robots.txt` at the root. Update `<lastmod>` in the sitemap when pages change, and add any new page to it.
+- Each page has a canonical URL and Open Graph/Twitter tags (link previews on WhatsApp/Facebook use `assets/og-image.jpg`, 1200×630).
+- `index.html` and `contact.html` carry a schema.org `Electrician` JSON-LD block (phone, email, hours, service areas, services). Keep it in sync if any of those change.
+- `404.html` is `noindex`.
+- Favicons: `favicon.ico` (48px, root, used by Google search results), `assets/favicon.png` (96px), `assets/apple-touch-icon.png` (180px).
+
 ## Logo
-`assets/logo-full.png` and `assets/logo-mark.png` are your real logo, cut from `PCB_Consulting_Logo1.jpeg` with the background removed:
+`assets/logo-full.png` (600px wide) and `assets/logo-mark.png` (102px tall, sized for the header) are your real logo, cut from `PCB_Consulting_Logo1.jpeg` with the background removed:
 - `logo-mark.png` — the icon only (sun, panel, swoosh, bolt). Used in the header, footer, and as the favicon.
 - `logo-full.png` — the full lockup (icon + "PCB CONSULTING" wordmark). Used as a showcase graphic on the About page.
 
