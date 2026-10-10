@@ -421,21 +421,8 @@ section { padding: 88px 0; }
   color: #fff;
 }
 .why-art svg { width: 100%; height: auto; }
-.why-art .why-art-placeholder {
-  min-height: 280px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 2px dashed rgba(245, 130, 31, 0.7);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-}
-.why-art .why-art-placeholder strong { color: var(--color-accent); }
+.why-art-photo { padding: 0; overflow: hidden; box-shadow: var(--shadow-lg); }
+.why-art-photo img { display: block; width: 100%; height: auto; }
 
 .logo-showcase {
   background: var(--color-surface);

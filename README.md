@@ -41,6 +41,7 @@ If you get a vector (SVG/AI/EPS) version of the logo later, swap these PNGs out 
 - `rooftop-panels.jpg` — Solar Installation section (Sandton rooftop)
 - `residential-wiring.jpg` — Residential Electrical section (distribution board + battery wiring)
 - `commercial-wiring.jpg` — Commercial Electrical section (multi-inverter + battery bank wall)
+- `warehouse-roof.jpg` — aerial shot of a warehouse roof array, in the "Why PCB Consulting" panel on `index.html` (source: `Pics/warehouse roof.png`, gitignored)
 - `inverter-room.jpg`, `battery-upgrade.jpg` — used in the "Recent Installations" gallery on `services.html`, alongside the rooftop shot
 
 The uncropped originals stay local in `install pics/` (gitignored, not published — they still have phone watermarks and aren't optimized for web).
